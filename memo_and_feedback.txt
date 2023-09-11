@@ -1,0 +1,24 @@
+This txt file includes some simple feedbacks that I've made while doing this project.
+
+
+--------------------------------------------------------------------------FEEDBACK----------------------------------------------------------------------------
+
+1. I should've used React or any other specific JavaScript library to create a better looking user interface (might study JavaScript one day).
+
+2. I tried to create the PUT (update) and DELETE (delete) methods to create a whole RESTful API, but I realized the <form action="" method=""> from HTML code,
+
+   the "method" attribute only supports GET and POST methods. Therefore, I changed the DELETE (delete) crud method to a normal function.
+
+   In addition, I did not include the PUT (update) method to the project.
+
+3. To be honest, the logic of authentication was not easy to study. I especially had a hard time about understanding how to store the JWT Token.
+
+   Storing JWT Token inside the browser can be dangerous and possibly hacked by specific attacks such as XSS or CSRF attacks.
+
+   In this program, I selected to store JWT Token in Cookies. It is not safe from CSRF attacks, but I stored tokens in 'HttpOnly' cookies and also I decreased
+
+   the expiry time to 10 minutes for the security.
+
+4. The 'password' attribute from UserInDB pydantic model does not have a strict format (ex: the password should be at least ten characters with two numbers).
+
+5. The 'full_name' attribute also not requires any strict format (ex: user should add a space between their full name: Hello World O / HelloWorld X).
