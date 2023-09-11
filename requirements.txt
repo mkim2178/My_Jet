@@ -1,0 +1,12 @@
+bcrypt
+email-validator
+fastapi
+jinja2
+jose
+motor
+passlib[bcrypt]
+pydantic
+python-jose[cryptography]
+python-multipart
+sqlalchemy
+uvicorn[standard]
