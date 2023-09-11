@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete Account</title>
+    <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">
+</head>
+<body>
+
+<h1>Delete Account</h1>
+
+<h2>If you want to delete your account, click the confirm button.</h2>
+
+<form action="/delete-my-account-post-confirm" method="post">
+    <button class="button-48" role="button"><span class="text">confirm</span></button>
+</form>
+
+<br>
+
+<a href="/private">
+    <button class="button-48" role="button"><span class="text">private</span></button>
+</a>
+
+<br>
+<br>
+
+
+{% include '_site_map.html' %}
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete Tickets</title>
+    <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">
+</head>
+<body>
+
+<h1>Delete One Ticket</h1>
+
+<h2>Tickets:</h2>
+
+{% for key, value in user_tickets.items() %}
+    <h4> {{ key }}: {{ value }} </h4>
+{% endfor %}
+
+
+
+<form action="/cancel-one-ticket-post-confirm" method="post">
+
+    <label>Select the departure date that you want to cancel (YYYY-MM-DD) and click the CANCEL button:</label>
+    <input type="date" name="cancel_date" value="{{ date }}" required>
+
+    <button class="button-48" role="button"><span class="text">cancel</span></button>
+</form>
+
+
+<br>
+
+
+<form action="/cancel-every-ticket-post-confirm" method="post">
+
+    <label>If you want to cancel ALL of your tickets, click the CANCEL ALL button:</label>
+    <button class="button-48" role="button"><span class="text">cancel all</span></button>
+</form>
+
+
+
+<br>
+
+
+<a href="/private">
+    <button class="button-48" role="button"><span class="text">private</span></button>
+</a>
+
+<br>
+<br>
+
+{% include '_site_map.html' %}
+
+
+</body>
+</html>

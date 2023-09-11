@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Ticket</title>
+    <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">
+</head>
+<body>
+
+<h1>Create Ticket</h1>
+
+
+<form action="/create-ticket" method="post">
+
+    <p>
+        <label>Starting Point:</label>
+    </p>
+    <input type="text" name="starting_point" value="{{ starting_point }}" required>
+
+
+    <p>
+        <label>Ending Point:</label>
+    </p>
+    <input type="text" name="ending_point" value="{{ ending_point }}" required>
+
+
+    <p>
+        <label>Departure Date:</label>
+    </p>
+    <input type="date" name="departure_date" value="{{ departure_date }}" required>
+
+    <p>
+        <label>Jet Type:</label>
+    </p>
+
+
+    <select name="jet_type" required>
+        <option value="VLJ">VLJ (Very Light Jet)</option>
+        <option value="SLJ">SLJ (Small Light Jet)</option>
+        <option value="Super LJ">Super LJ (Super Light Jet)</option>
+        <option value="MCJ">SLJ (Midsize Cabin Jet)</option>
+        <option value="Super MCJ">Super MCJ (Super Midsize Cabin Jet)</option>
+        <option value="HJ">HJ (Heavy Jet)</option>
+        <option value="ULR HJ">ULR HJ (Ultra-Long-Range Heavy Jet)</option>
+        <option value="BIZ">BIZ (Biz-liners)</option>
+    </select>
+
+
+
+    <p>
+        <button class="button-48" role="button"><span class="text">create</span></button>
+    </p>
+
+
+
+</form>
+
+<a href="/private">
+    <button class="button-48" role="button"><span class="text">private</span></button>
+</a>
+
+<br>
+<br>
+
+{% include '_site_map.html' %}
+
+</body>
+</html>

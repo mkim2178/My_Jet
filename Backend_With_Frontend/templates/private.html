@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Private</title>
+    <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">
+</head>
+<body>
+
+<h1>Private</h1>
+
+<h2>Login ID: {{ login_id }}</h2>
+<h2>Email: {{ email }}</h2>
+<h2>Birth Date (YYYYMMDD): {{ birth_date }}</h2>
+<h2>Sex: {{ sex }}</h2>
+<h2>Full Name: {{ full_name }}</h2>
+<h2>Current Mileage: {{ user_mileage }}</h2>
+<h2>Tickets:</h2>
+{% for key, value in user_tickets.items() %}
+    <h4> {{ key }}: {{ value }} </h4>
+{% endfor %}
+
+
+
+
+<div>
+    <a href="/create-ticket-get">
+        <button class="button-48" role="button"><span class="text">create a ticket</span></button>
+    </a>
+</div>
+
+
+<br>
+
+
+{% if show_cancel_menu %}
+
+<form action="/cancel-tickets-get" method="get">
+    <button class="button-48" role="button"><span class="text">cancel tickets</span></button>
+</form>
+
+<br>
+
+{% endif %}
+
+
+<form action="/delete-my-account-get" method="get">
+
+    <button class="button-48" role="button"><span class="text">delete my account</span></button>
+<!--    <input type="submit" value="Delete Account">-->
+</form>
+
+
+
+
+
+<br>
+
+
+
+{% include '_site_map.html' %}
+
+</body>
+</html>

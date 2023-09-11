@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Jet</title>
+    <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">
+</head>
+<body>
+    <h1>My_Jet</h1>
+
+    <h3>{{ user_status }}</h3>
+
+    {% if need_to_login %}
+
+        <div>
+            <a href="/sign_up">
+                <button class="button-48" role="button"><span class="text">sign up</span></button>
+            </a>
+        </div>
+
+        <br>
+
+
+        <div>
+            <a href="/login">
+                <button class="button-48" role="button"><span class="text">login</span></button>
+            </a>
+        </div>
+
+    {% else %}
+
+        <br>
+        <div>
+            <a href="/private">
+                <button class="button-48" role="button"><span class="text">private</span></button>
+            </a>
+        </div>
+
+        <br>
+        <div>
+            <a href="/logout">
+                <button class="button-48" role="button"><span class="text">logout</span></button>
+            </a>
+        </div>
+
+    {% endif %}
+
+
+
+
+
+</body>
+</html>
