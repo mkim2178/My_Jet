@@ -17,7 +17,8 @@ The reference uses the 'OAuth2' and JWT Token for the security.
 
 # This is a secret key for the JWT Token. It is a random string and I got this by using following command: openssl rand -hex 32
 # In my opinion, this secret key should be hidden somewhere, but I just initialized in this file to comfortably use it for debugging purpose OR from several functions.
-SECRET_KEY = "a909dbfad5cc941fc277e3ec56efd63aadafed50197baab4a35ab4a4a4914a51"
+# updated (2/16/2025) -> I erased my SECRET KEY.
+SECRET_KEY = "your_api_key"
 
 
 # The 'HS256' is a name of algorithm that will be used to create a secret key for user to interact this program.
